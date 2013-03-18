@@ -19,18 +19,6 @@ f{% set userId = userId | default(1) %}
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', '{{ google_analytics }}']);
 	  _gaq.push(['_trackPageview']);
-	alert("hi")
-                var userLang = (navigator.language) ? navigator.language : navigator.userLanguage;
-          	if ( userLang=="en-US")
-			{
-                        	
-				window.location = window.location.href.replace('/ja/','/en/');
-                	}
-		else if ( userLang=="ja" )
-			{
-          
-				window.location = window.location.href.replace('/en/','/ja/');
-			}
 
 	  (function() {
 		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -43,16 +31,6 @@ f{% set userId = userId | default(1) %}
 	{% else %}
 	
 	<script type="text/javascript">
-	alert("hi")
-	function setCookie(c_name,value,exdays)
-        {
-                var exdate=new Date();
-                exdate.setDate(exdate.getDate() + exdays);
-                var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
-                document.cookie=c_name + "=" + c_value;
-        }
-
-
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-34158612-1']);
 	  _gaq.push(['_trackPageview']);
